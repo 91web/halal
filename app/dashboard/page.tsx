@@ -4,6 +4,7 @@ import { HistoryTable } from "@/components/dashboard/history-table"
 import { AnalysisInput } from "@/components/dashboard/analysis-input"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
+import { BackButton } from "@/components/ui/back-button"
 
 export default async function DashboardPage() {
   const user = await getAuthUser()
@@ -18,11 +19,14 @@ export default async function DashboardPage() {
         <AppSidebar user={user} />
         <main className="flex-1 overflow-y-auto bg-muted/20 p-8">
           <div className="flex items-center justify-between mb-8">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground tracking-tight">
-                Assalamu Alaikum, {user.email.split("@")[0]}
-              </h1>
-              <p className="text-muted-foreground mt-1">Check your ingredients for Halal compliance.</p>
+            <div className="flex items-center gap-4">
+              <BackButton />
+              <div>
+                <h1 className="text-3xl font-bold text-foreground tracking-tight">
+                  Assalamu Alaikum, {user.email.split("@")[0]}
+                </h1>
+                <p className="text-muted-foreground mt-1">Check your ingredients for Halal compliance.</p>
+              </div>
             </div>
             <SidebarTrigger />
           </div>

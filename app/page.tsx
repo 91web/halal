@@ -98,7 +98,7 @@ export default function LandingPage() {
                   value={ingredient}
                   onChange={(e) => setIngredient(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                  className="flex-1 bg-background border-input"
+                  className="flex-1 bg-background border-input h-12"
                 />
                 <Button
                   onClick={handleSearch}
