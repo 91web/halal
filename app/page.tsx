@@ -67,7 +67,7 @@ export default function LandingPage() {
             <div className="flex items-center gap-2">
               <Shield className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-foreground">
-                HalalCheck AI
+                HalalCheck
               </span>
             </div>
             <nav className="flex items-center gap-4">
@@ -149,12 +149,12 @@ export default function LandingPage() {
                         {result.status}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed text-left">
                       {result.reason}
                     </p>
                     {result.limited && (
                       <div className="mt-4 p-3 bg-primary/5 border border-primary/20 rounded-md">
-                        <p className="text-sm text-primary font-medium">
+                        <p className="text-sm text-primary font-medium text-left">
                           🔒 {result.message}
                         </p>
                       </div>
