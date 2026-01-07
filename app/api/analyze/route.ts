@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     }
 
     const { text } = await generateText({
-      model: google("gemini-2.5-flash"), // Switched to 'gemini-1.5-flash' which is more stable and widely available for structured outputs
+      model: google("gemini-3-flash-preview"), // Switched to 'gemini-1.5-flash' which is more stable and widely available for structured outputs
       prompt: `Analyze the ingredient "${ingredient}" for Halal compliance. 
       Provide a structured response in JSON format with the following fields:
       - status: "Halal", "Haram", or "Mushbooh" (doubtful)
